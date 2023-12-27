@@ -1,3 +1,52 @@
+# **Police Feedback System**
+
+Due to antiquated procedures and privacy issues, it is challenging to get input on police activities. Conventional methods, such as complaints calls and inspections, are exclusive and insufficient. This makes it more difficult to comprehend community sentiment and properly handle enforcement concerns.
+
+**Project Detail**
+
+Team Name : Debug Thugs
+
+Team Head Name : Kapadiya Meet A.
+
+2nd Team Member Name : Tamboli Pratham J.
+
+3rd Team Member Name : Joshi Kavya K.
+
+Registration ID - RJPOLICE\_HACK\_372
+
+Unique Key - 56917008450a22dc773f69eb221e252c
+
+**Why we Choose this particular Problem Statement?**
+
+- We are the ones that are naturally curious and full of energy to solve problems with ease, and we are capable of solving the idea in a timely manner. We chose the Police Feedback System because, on November 4, 2023, during the New India Vibrant Hackathon 2K23, we had previously worked on the identical issue for the Gujarat Police. We put all of our effort into solving the problem in accordance with the problem description, and we are successful in receiving the judge's opinions and suggestions during the mentoring round.
+
+**Software and Technology**
+
+1. **Programming languages:**
+
+- HTML
+- CSS
+- JavaScript
+- Python
+- SQL
+
+1. **Frameworks:**
+
+- Tailwind
+- Next.js
+
+1. **Tools:**
+
+- Figma
+- Vscode
+
+1. **Libraries:**
+
+- pyqrcode
+- png
+- segno
+- mysql.connector
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
