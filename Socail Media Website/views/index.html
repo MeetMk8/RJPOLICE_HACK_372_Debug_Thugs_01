@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet"  type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Instagram</title>
+</head>
+<body>
+   
+<header>
+    <div class="header_container">
+        <div>
+            
+<button id="showLoginForm">Login</button>
+            
+<button class="signup"><a href="/test.html">Sign up</a></button>
+
+        </div>  
+        <div class="heading">
+            <h1>Social DataBank</h1>
+        </div>
+        <div class="searchbar">
+            <input class="search" placeholder="Search" type="search" name="" id="">
+        </div>
+                
+    </div>
+   
+</header>
+<section class="userdetails">
+    
+</section>
+<section class="main-container">
+    <div class="switch">
+        <button class="btn" onclick="switchTab('reviewpost','complaintpost')" id="complaint">Complaint</button>
+        <button class="btn" onclick="switchTab('complaintpost','reviewpost')" id="review">Review</button>
+    </div>
+    <div class="post-container active-tab" id="complaintpost">
+
+    </div>
+    <div class="post-container " id="reviewpost">
+
+</div>
+
+</section>
+<section>
+
+    <form id="loginForm" >
+        <h1>Login</h1>
+    <label for="loginUsername">Username:</label>
+    <input type="text" id="loginUsername" name="loginUsername" required>
+
+    <label for="loginPassword">Password:</label>
+    <input type="password" id="loginPassword" name="loginPassword" required>
+
+    <button type="button" class="submitbtn" onclick="attemptLogin()">Login</button>
+</form>
+</section>
+<script src="/js/index.js"></script>
+</body>
+</html>

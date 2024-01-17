@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #form-container {
+            background-color: #fff;
+            padding: 20px;
+            width: 30%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab button {
+            padding: 10px;
+            flex: 1;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: #3498db;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 5px 5px 0 0;
+            transition: background-color 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #297fb8;
+        }
+
+        .form-content {
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+            background-color: #ecf0f1;
+        }
+
+        .form-field {
+            margin-bottom: 15px;
+        }
+
+        .form-field label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-field input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-field input[type="submit"] {
+            background-color: #2ecc71;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .form-field input[type="submit"]:hover {
+            background-color: #27ae60;
+        }
+        #signupForm{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div id="form-container">
+    <div><h1>singup</h1></div>
+    <div id="signupForm" class="form-content" >
+        <div class="form-field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+        </div>
+
+        <div class="form-field">
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" required>
+        </div>
+
+        <div class="form-field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="form-field">
+            <label for="district">District:</label>
+            <input type="text" id="district" required>
+        </div>
+
+        <div class="form-field">
+            <label for="subdistrict">Subdistrict:</label>
+            <input type="text" id="subdistrict" required>
+        </div>
+
+        <div class="form-field">
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" required>
+        </div>
+
+        <div class="form-field">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" required>
+        </div>
+
+        <div class="form-field">
+            <input type="submit" value="Signup" onclick="signup()">
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    // 
+    
+    function signup() {
+        var name = $('#name').val();
+        var contact = $('#contact').val();
+        var email = $('#email').val();
+        var district = $('#district').val();
+        var subdistrict = $('#subdistrict').val();
+        var password = $('#signupPassword').val();
+        var confirmPassword = $('#confirmPassword').val();
+        var username="myself345";
+        console.log(username)
+        // Validate if passwords match
+        if (password !== confirmPassword) {
+            alert('Passwords do not match');
+            return;
+        }
+        formData={username,name,contact,district,subdistrict,email,password};
+        if(formData){
+            senddata();
+        }
+        // Add your logic for handling signup here
+        // console.log('Signup:', name, contact, email, district, subdistrict, password);
+    }
+    
+    var formData;
+    function senddata(){
+        
+            const response = fetch('http://localhost:8000/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+
+    }
+    
+    
+</script>
+
+</body>
+</html>
